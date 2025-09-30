@@ -565,7 +565,7 @@ html, body {
   .rating{
     display:flex;
     justify-content: flex-start;
-    /*flex-direction:row-reverse;*/
+    flex-direction:row-reverse;
     margin-left: -10px;
   }
   .rating span {
