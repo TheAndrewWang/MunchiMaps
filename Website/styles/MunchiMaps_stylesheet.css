@@ -180,10 +180,52 @@ html, body {
   cursor: pointer;
 }
 
-.icons-description, .map-key {
+.map-key {
   margin-top: 20px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.icons-description {
+  border-collapse: collapse;
+  table-layout: auto; /* allow columns to size to content */
+  width: 100%;
+  max-width: 100%;
 }
 
+.icons-description td {
+  vertical-align: middle;
+  padding: 6px 8px;
+}
+
+.icons-description td:first-child {
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+  padding-right: 8px;
+}
+
+.icons-description td:last-child {
+  width: auto;
+  text-align: left;
+  padding-left: 0;
+}
+
+.map-key td {
+  vertical-align: middle;
+  padding: 6px 8px;
+}
+
+.map-key td:first-child {
+  width: 80px; /* adjust to taste */
+  text-align: center;
+  padding-right:8px;
+}
+
+.map-key td:last-child {
+  text-align: left;
+  padding-left: 10px;
+}
 .map-key tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
@@ -193,15 +235,36 @@ html, body {
 }
 
 .icon-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  display: table-row;
 }
 
-.help-icon, .map-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+.icon-item > td {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 6px 8px;
+}
+
+.map-icon {
+  width: 28px;
+  height:28px;
+  object-fit: contain;
+  display: inline-block;
+  margin: 0 6px 6px 0;
+  vertical-align: middle;
+}
+
+.help-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px 0 0;
+  object-fit: contain;
+}
+
+.flat-icon {
+  width: 35px;
+  height: 35px;
 }
 
 /* Map Key Button */
