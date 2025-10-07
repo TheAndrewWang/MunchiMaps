@@ -122,6 +122,75 @@ class EventEmitter {
         this.images = setImages(this.name, this.num_snack_machines, this.num_drink_machines);
 
         this.infoWindowContent = `
+        <style>
+          .submit-button,
+          .submit-button *,
+          .submit-button :after,
+          .submit-button :before,
+          .submit-button:after,
+          .submit-button:before {
+            border: 0 solid;
+            box-sizing: border-box;
+          }
+          .submit-button {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-appearance: button;
+            background-color: #000;
+            background-image: none;
+            color: #fff;
+            cursor: pointer;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+              Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+              Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-size: 100%;
+            line-height: 1.5;
+            margin: 0;
+            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+            padding: 0;
+          }
+          .submit-button:disabled {
+            cursor: default;
+          }
+          .submit-button:-moz-focusring {
+            outline: auto;
+          }
+          .submit-button svg {
+            display: block;
+            vertical-align: middle;
+          }
+          .submit-button [hidden] {
+            display: none;
+          }
+          .submit-button {
+            background: linear-gradient(90deg, #92b3b5, #2596be);
+            border-radius: 999px;
+            box-sizing: border-box;
+            color: #000;
+            display: block;
+            font-weight: 900;
+            overflow: hidden;
+            padding: 1rem 7.9rem;
+            position: relative;
+            text-transform: uppercase;
+          }
+          .submit-button span {
+            background: #1e293b;
+            border-radius: 999px;
+            color: #fff;
+            display: grid;
+            inset: 5px;
+            place-items: center;
+            position: absolute;
+            transition: background 0.3s;
+          }
+          .submit-button:hover span {
+            background: none;
+          }
+          .rating_block {
+            text-align: center;
+            height: 500px;
+          }
+        </style>
         <div class="info-window-content">
           <div class="info-window-image">
             ${this.images}
@@ -153,7 +222,7 @@ class EventEmitter {
                   <span rating-star="2"><img src="https://github.com/mike-cautela/MunchiMaps/blob/main/Website/MunchiMaps%20Assets/CookieFavicon.png?raw=true" alt="Star 2" width="30" height="30"></span>
                   <span rating-star="1"><img src="https://github.com/mike-cautela/MunchiMaps/blob/main/Website/MunchiMaps%20Assets/CookieFavicon.png?raw=true" alt="Star 1" width="30" height="30"></span>
                 </div>
-                <button type="submit">Submit</button>
+                <button class="submit-button" type="submit">Submit</button>
                 </form>
               </div>
             </div>
