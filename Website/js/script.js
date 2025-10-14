@@ -188,7 +188,6 @@ class EventEmitter {
           }
           .rating_block {
             text-align: center;
-            height: 500px;
           }
         </style>
         <div class="info-window-content">
@@ -212,7 +211,7 @@ class EventEmitter {
                 <!-- Existing reviews will be appended here -->
               </div>
               <h4>Write a Review</h4>
-              <div class="rating_block>
+              <div class="rating_block">
                 <form class="submit-review">
                 <textarea id="review-text" placeholder="Write your review here..." required></textarea>
                 <div class="rating">
